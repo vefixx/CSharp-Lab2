@@ -2,25 +2,30 @@ using Microsoft.VisualBasic.CompilerServices;
 
 namespace Laba2;
 
-public class Validator
+public class IoHelper
 {
-    public Validator()
+    public IoHelper()
     {
         
     }
 
-    public int ReadInt(string prompt)
+    public static int ReadInt(string prompt)
     {
         int value;
         while (!int.TryParse(ReadNotEmptyString(prompt), out value))
         {
-            Console.Write($"Ошибка! ");
+            Console.Write($"Ошибка!");
         }
 
         return value;
     }
-
-    public string ReadNotEmptyString(string prompt)
+    
+    /// <summary>
+    /// Считывает строку из консоли, пока пользователь не введет любое значение
+    /// </summary>
+    /// <param name="prompt"></param>
+    /// <returns></returns>
+    public static string ReadNotEmptyString(string prompt)
     {
         string input;
         while (true)
@@ -40,8 +45,13 @@ public class Validator
 
         return input;
     }
-
-    public int[] ReadIntArray(int length)
+    
+    /// <summary>
+    /// Последовательно считывает значения пользователя из консоли для формирования массива
+    /// </summary>
+    /// <param name="length"></param>
+    /// <returns></returns>
+    public static int[] ReadIntArray(int length)
     {
         int[] arr = new int[length];
 
@@ -63,5 +73,10 @@ public class Validator
         }
 
         return arr;
+    }
+
+    public static void PrintArray(int[] arr)
+    {
+        Console.WriteLine(string.Join(", ", arr));
     }
 }
