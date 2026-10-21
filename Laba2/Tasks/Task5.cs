@@ -29,6 +29,6 @@ public class Task5
         
         var finalResult = f1.Sum(f2).Div(f3).Minus(5);
 
-        Console.WriteLine($"{f1} + {f2} / {f3} - 5 = {finalResult}");
+        Console.WriteLine($"({f1} + {f2}) / {f3} - 5 = {finalResult}");
     }
 }
