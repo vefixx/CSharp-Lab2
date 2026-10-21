@@ -52,7 +52,6 @@ class Program
                     isRunning = false;
                     break;
                 default:
-                    Console.Clear();
                     Console.WriteLine("Некорректный ввод");
                     break;
             }
