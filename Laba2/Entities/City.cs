@@ -9,7 +9,7 @@ public class City
 
     public City(string name)
     {
-        _name = name;
+        Name = name;
         _paths = new Dictionary<City, int>();
     }
 

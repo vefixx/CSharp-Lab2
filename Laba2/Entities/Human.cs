@@ -8,7 +8,7 @@ public class Human
     public Human(string name, int height)
     {
         _name = name;
-        _height = height;
+        Height = height;
     }
 
     public int Height

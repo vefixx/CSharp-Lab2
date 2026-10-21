@@ -8,7 +8,7 @@ public class HumanWithName
     public HumanWithName(Name name, int height)
     {
         _name = name;
-        _height = height;
+        Height = height;
     }
 
     public int Height

@@ -8,9 +8,9 @@ public class Name
 
     public Name(string lastName, string firstName, string middleName)
     {
-        _lastName = lastName;
-        _firstName = firstName;
-        _middleName = middleName;
+        LastName = lastName;
+        FirstName = firstName;
+        MiddleName = middleName;
     }
 
     public string LastName
