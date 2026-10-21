@@ -20,7 +20,7 @@ class Program
             Console.WriteLine("2) Задача 1.3");
             Console.WriteLine("3) Задача 2.2");
             Console.WriteLine("4) Задача 3.3");
-            Console.WriteLine("5) Задача 4.3");
+            Console.WriteLine("5) Задача 4.8");
             Console.WriteLine("6) Задача 5.5");
             Console.WriteLine("0) Выход");
             Console.WriteLine();
