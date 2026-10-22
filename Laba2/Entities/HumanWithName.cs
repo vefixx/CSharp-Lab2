@@ -7,8 +7,14 @@ public class HumanWithName
 
     public HumanWithName(Name name, int height)
     {
-        _name = name;
+        Name = name;
         Height = height;
+    }
+    
+    public Name Name
+    {
+        get { return _name; }
+        set { _name = value; }
     }
 
     public int Height
@@ -32,7 +38,7 @@ public class HumanWithName
             }
         }
     }
-
+    
     public override string ToString()
     {
         return $"{_name}, рост: {_height}";

@@ -7,8 +7,14 @@ public class Human
 
     public Human(string name, int height)
     {
-        _name = name;
+        Name = name;
         Height = height;
+    }
+
+    public string Name
+    {
+        get { return _name; }
+        set { _name = value; }
     }
 
     public int Height

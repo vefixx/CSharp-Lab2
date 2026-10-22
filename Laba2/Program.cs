@@ -14,6 +14,8 @@ class Program
         var task4 = new Task4();
         var task5 = new Task5();
 
+
+        string choice;
         do
         {
             Console.WriteLine("1) Задача 1.2");
@@ -26,7 +28,7 @@ class Program
             Console.WriteLine();
             Console.Write("Введите номер задачи: ");
 
-            string choice = Console.ReadLine();
+            choice = Console.ReadLine();
 
             switch (choice)
             {

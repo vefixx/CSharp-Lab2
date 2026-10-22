@@ -23,7 +23,7 @@ public class Task1
     public void ExecuteSubtask3()
     {
         var name1 = new Name("", "Клеопатра", "");
-        var name2 = new Name("Пушкин", "Александр", "Александрович");
+        var name2 = new Name("Пушкин", "Александр", "Сергеевич");
         var name3 = new Name("Маяковский", "Владимир", "");
 
         Console.WriteLine(name1);

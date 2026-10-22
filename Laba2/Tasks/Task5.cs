@@ -11,9 +11,9 @@ public class Task5
     
     public void ExecuteSubtask5() 
     {
-        var f1 = new Drob(1, 2); // 1/2
-        var f2 = new Drob(1, 3); // 1/3
-        var f3 = new Drob(2, 5); // 2/5
+        var f1 = new Fraction(1, 2); // 1/2
+        var f2 = new Fraction(1, 3); // 1/3
+        var f3 = new Fraction(2, 5); // 2/5
 
         Console.WriteLine($"{f1} + {f2} = {f1.Sum(f2)}");
         Console.WriteLine($"{f1} + 2 = {f1.Sum(2)}");
@@ -24,8 +24,8 @@ public class Task5
         Console.WriteLine($"{f1} / {f2} = {f1.Div(f2)}");
         Console.WriteLine($"{f1} / 2 = {f1.Div(2)}");
 
-        var exampleCalc = new Drob(1, 3).Multiply(new Drob(2, 3));
-        Console.WriteLine($"пример: {exampleCalc}");
+        var exampleCalc = new Fraction(1, 3).Multiply(new Fraction(2, 3));
+        Console.WriteLine($"1/3 * 2/3 = {exampleCalc}");
         
         var finalResult = f1.Sum(f2).Div(f3).Minus(5);
 

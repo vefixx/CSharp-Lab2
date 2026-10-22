@@ -56,11 +56,12 @@ public class IoHelper
         int[] arr = new int[length];
 
         int i = 0;
+        int value;
+        string input;
         while (i < length)
         {
-            string input = ReadNotEmptyString($"Введите число №{i + 1}: ");
+            input = ReadNotEmptyString($"Введите число №{i + 1}: ");
             
-            int value;
             if (!int.TryParse(input, out value))
             {
                 Console.Write("Ошибка! Некорректное значение.");

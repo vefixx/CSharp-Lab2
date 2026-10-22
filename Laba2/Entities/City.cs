@@ -13,26 +13,6 @@ public class City
         _paths = new Dictionary<City, int>();
     }
 
-    public void AddPath(City city, int cost)
-    {
-        _paths[city] = cost;
-    }
-
-    public override string ToString()
-    {
-        var stringBuilder = new StringBuilder();
-        
-        if (_paths.Count > 0)
-        {
-            foreach (KeyValuePair<City, int> path in _paths)
-            {
-                stringBuilder.Append($"{path.Key._name}:{path.Value}\n");
-            }
-        }
-
-        return stringBuilder.ToString();
-    }
-
     public string Name
     {
         get
@@ -52,5 +32,31 @@ public class City
                 _name = n;
             }
         }
+    }
+
+    public Dictionary<City, int> Paths
+    {
+        get { return _paths; }
+        set { _paths = value; }
+    }
+    
+    public void AddPath(City city, int cost)
+    {
+        _paths[city] = cost;
+    }
+
+    public override string ToString()
+    {
+        var stringBuilder = new StringBuilder();
+        
+        if (_paths.Count > 0)
+        {
+            foreach (KeyValuePair<City, int> path in _paths)
+            {
+                stringBuilder.Append($"{path.Key._name}:{path.Value}\n");
+            }
+        }
+
+        return stringBuilder.ToString();
     }
 }
