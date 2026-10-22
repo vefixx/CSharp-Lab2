@@ -24,13 +24,13 @@ public class Fraction
         {
             if (value == 0)
             {
-                int z = IoHelper.ReadInt("Введите корректный знаменатель (> 0): ");
-                while (z == 0)
+                int d = IoHelper.ReadInt("Введите корректный знаменатель (> 0): ");
+                while (d == 0)
                 {
-                    z = IoHelper.ReadInt("Введите корректный знаменатель (> 0): ");
+                    d = IoHelper.ReadInt("Введите корректный знаменатель (> 0): ");
                 }
 
-                _denominator = z;
+                _denominator = d;
             }
             else
             {
@@ -47,8 +47,8 @@ public class Fraction
         // x/y + z/w
         // (x*w/y*w) + (z*y/w*y) = (x*w + z*y)/y*w
 
-        var newDrop = new Fraction((_numerator * other._denominator + other._numerator * _denominator), (_denominator * other._denominator));
-        return newDrop;
+        var newFraction = new Fraction((_numerator * other._denominator + other._numerator * _denominator), (_denominator * other._denominator));
+        return newFraction;
     }
     
     public Fraction Sum(int num)
@@ -60,40 +60,40 @@ public class Fraction
         // (x*w/y*w) + (z*y/w*y) = (x*w + z*y)/y*w
 
         var other = new Fraction(num, 1);
-        var newDrop = new Fraction((_numerator * other._denominator + other._numerator * _denominator), (_denominator * other._denominator));
-        return newDrop;
+        var newFraction = new Fraction((_numerator * other._denominator + other._numerator * _denominator), (_denominator * other._denominator));
+        return newFraction;
     }
 
     public Fraction Minus(Fraction other)
     {
-        var newDrop = new Fraction((_numerator * other._denominator - other._numerator * _denominator), (_denominator * other._denominator));
-        return newDrop;
+        var newFraction = new Fraction((_numerator * other._denominator - other._numerator * _denominator), (_denominator * other._denominator));
+        return newFraction;
     }
     
     public Fraction Minus(int num)
     {
         var other = new Fraction(num, 1);
-        var newDrop = new Fraction((_numerator * other._denominator - other._numerator * _denominator), (_denominator * other._denominator));
-        return newDrop;
+        var newFraction = new Fraction((_numerator * other._denominator - other._numerator * _denominator), (_denominator * other._denominator));
+        return newFraction;
     }
 
     public Fraction Multiply(Fraction other)
     {
-        var newDrop = new Fraction(_numerator * other._numerator, _denominator * other._denominator);
-        return newDrop;
+        var newFraction = new Fraction(_numerator * other._numerator, _denominator * other._denominator);
+        return newFraction;
     }
     
     public Fraction Multiply(int num)
     {
         var other = new Fraction(num, 1);
-        var newDrop = new Fraction(_numerator * other._numerator, _denominator * other._denominator);
-        return newDrop;
+        var newFraction = new Fraction(_numerator * other._numerator, _denominator * other._denominator);
+        return newFraction;
     }
 
     public Fraction Div(Fraction other)
     {
-        var newDrop = new Fraction(_numerator * other._denominator, _denominator * other._numerator);
-        return newDrop;
+        var newFraction = new Fraction(_numerator * other._denominator, _denominator * other._numerator);
+        return newFraction;
     }
     
     public Fraction Div(int num)
@@ -104,8 +104,8 @@ public class Fraction
         }
         
         var other = new Fraction(num, 1);
-        var newDrop = new Fraction(_numerator * other._denominator, _denominator * other._numerator);
-        return newDrop;
+        var newFraction = new Fraction(_numerator * other._denominator, _denominator * other._numerator);
+        return newFraction;
     }
 
     public override string ToString()
